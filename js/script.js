@@ -7,45 +7,55 @@ $('.navbar-burger').on('click', () => {
     $('.img-hero').toggleClass('img-hero-back');
 });
 
-$('.header').ready(() => {
+// Load hero animations
+var imgHero = $('.img-hero');
 
-    $('.brand').delay(200).animate({
+if (imgHero.prop('complete')) {
+    loadHeader();
+} else {
+    imgHero.on('load', function () {
+        loadHeader();
+    });
+}
+
+function loadHeader() {
+    $('.brand').animate({
         left: '+=100px',
         opacity: 1
     }, 1000);
 
-    $('.img-hero').delay(400).animate({
+    imgHero.delay(200).animate({
         left: '+=100px',
         opacity: 1
-    }, 1000, function() {
+    }, 1000, function () {
         $(this).css('transition', 'all .3s ease-in');
         $(this).hover(
-            function() {
-              $(this).css({
-                transform: 'translateX(20px)',
-              });
+            function () {
+                $(this).css({
+                    transform: 'translateX(20px)',
+                });
             },
-            function() {
-              $(this).css({
-                transform: '',
-              });
+            function () {
+                $(this).css({
+                    transform: '',
+                });
             }
-          );
+        );
     });
 
-    $('.navbar-item').delay(200).each(function(index, element){
-        $(this).delay(index*200).animate({
+    $('.navbar-item').each(function (index, element) {
+        $(this).delay(index * 200).animate({
             left: '-=100px',
             opacity: 1
-        }, 1000, function(){
+        }, 1000, function () {
             $(this).css('transition', 'all .2s ease-in');
         })
     });
 
-    $('.container-hero-text').children().delay(300).each(function(index, element){
-        $(this).delay(index*100).animate({
+    $('.container-hero-text').children().delay(150).each(function (index, element) {
+        $(this).delay(index * 100).animate({
             top: '-=100px',
             opacity: 1
         }, 1000);
     })
-});
+}
