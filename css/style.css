@@ -37,6 +37,8 @@ nav {
     align-items: center;
     width: 100%;
     max-width: 1280px;
+    background-color: var(--bg-color);
+    z-index: 1;
 }
 
 .brand {
@@ -162,25 +164,25 @@ nav .navbar-burger {
     align-items: center;
 }
 
-.img-hero{
+.img-hero {
+    width: 30vw;
     position: relative;
     left: -100px;
     opacity: 0;
 }
 
-.img-hero-back{
+.img-hero-back {
     z-index: -1;
 }
 
-.img-hero {
-    width: 30vw;
-}
-
 .container-hero-text {
-    height: 70%;
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background-color: bisque; */
+    overflow: hidden;
 }
 
 .container-hero-text h1 {
@@ -200,7 +202,7 @@ nav .navbar-burger {
     font-size: clamp(16px, 1.7vw, 40px);
 }
 
-.container-hero-text p a{
+.container-hero-text p a {
     color: var(--color-text-orange);
 }
 
@@ -240,6 +242,137 @@ nav .navbar-burger {
     transition: all .1s ease-in;
 }
 
+.contaner-anim-hero {
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    top: 100px;
+}
+
+.ch-flip{
+    transform: scaleX(-1);
+}
+
+.hex:nth-child(1) {
+    position: absolute;
+    top: 3vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 14vh;
+    height: 14vh;
+    background-color: #ff9068;
+    left: 0px;
+    opacity: 0;
+    animation: animHex 10s 1s ease-in infinite;
+}
+
+.hex:nth-child(2) {
+    position: absolute;
+    top: 19vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 10vh;
+    height: 10vh;
+    background-color: #ff9068;
+    left: 0px;
+    opacity: 0;
+    animation: animHex 10s 2s ease-in infinite;
+}
+
+.hex:nth-child(3) {
+    position: absolute;
+    top: 15vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 13vh;
+    height: 13vh;
+    background-color: #ff9068;
+    left: 12.5vh;
+    opacity: 0;
+    animation: animHex 10s 3s ease-in infinite;
+}
+
+.hex:nth-child(4) {
+    position: absolute;
+    top: 6vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 8vh;
+    height: 8vh;
+    background-color: #ff9068;
+    left: 16vh;
+    opacity: 0;
+    animation: animHex 10s 4s ease-in infinite;
+}
+
+.hex:nth-child(5) {
+    position: absolute;
+    top: 8vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 12vh;
+    height: 12vh;
+    background-color: #ff9068;
+    left: 27.5vh;
+    opacity: 0;
+    animation: animHex 10s 5s ease-in infinite;
+}
+
+.hex:nth-child(6) {
+    position: absolute;
+    top: 20vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 5vh;
+    height: 5vh;
+    background-color: #ff9068;
+    left: 27vh;
+    opacity: 0;
+    animation: animHex 10s 6s ease-in infinite;
+}
+
+.hex:nth-child(7) {
+    position: absolute;
+    top: 19vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 10vh;
+    height: 10vh;
+    background-color: #ff9068;
+    left: 34.5vh;
+    opacity: 0;
+    animation: animHex 10s 7s ease-in infinite;
+}
+
+.hex:nth-child(8) {
+    position: absolute;
+    top: 13vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 7vh;
+    height: 7vh;
+    background-color: #ff9068;
+    left: 41vh;
+    opacity: 0;
+    animation: animHex 10s 8s ease-in infinite;
+}
+
+.hex:nth-child(9) {
+    position: absolute;
+    top: 20vh;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 5vh;
+    height: 5vh;
+    background-color: #ff9068;
+    left: 46vh;
+    opacity: 0;
+    animation: animHex 10s 9s ease-in infinite;
+}
+
+@keyframes animHex {
+    25%{
+        opacity: .7;
+    }50%{
+        opacity: .7;
+    }75%{
+        opacity: 0;
+    }100%{
+        opacity: 0;
+    }
+}
+
 @media (max-width: 768px) {
     nav .navbar-burger {
         display: flex;
@@ -274,6 +407,10 @@ nav .navbar-burger {
 
     .container-hero-text {
         z-index: -1;
+    }
+
+    .img-hero:hover {
+        transform: none !important;
     }
 }
 

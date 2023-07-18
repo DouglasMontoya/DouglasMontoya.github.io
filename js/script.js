@@ -57,5 +57,5 @@ function loadHeader() {
             top: '-=100px',
             opacity: 1
         }, 1000);
-    })
+    });
 }
