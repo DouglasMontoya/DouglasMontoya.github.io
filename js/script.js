@@ -69,8 +69,8 @@ function loadHeader() {
 //Intersection observer
 let options = {
     root: null,
-    rootMargin: "0px 0px -50px 0px",
-    threshold: 1,
+    rootMargin: "0px 0px -400px 0px",
+    threshold: 0,
 };
 
 let observer = new IntersectionObserver(animSection, options);
