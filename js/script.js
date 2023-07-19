@@ -58,4 +58,43 @@ function loadHeader() {
             opacity: 1
         }, 1000);
     });
+
+    for (let i = 0; i < 9; i++) {
+        $('<div class="hex"></div>').appendTo('.contaner-anim-hero');
+    }
+
+    $('main').css({ 'display': 'block' });
 }
+
+//Intersection observer
+let options = {
+    root: null,
+    rootMargin: "0px 0px -50px 0px",
+    threshold: 1,
+};
+
+let observer = new IntersectionObserver(animSection, options);
+document.querySelectorAll('section').forEach(element => {
+    observer.observe(element);
+});
+
+function animSection(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let elemetsAnim;
+            if($(entry.target).hasClass('about')){
+                elemetsAnim = '.about .title-section, .container-section-text p';
+            }else if($(entry.target).hasClass('portfolio')){
+                elemetsAnim = '.portfolio .title-section, .cotainer-thumbnails .c-thumbnail';
+            }
+            $(elemetsAnim).each(function(index, element){
+                $(this).delay(index * 100).animate({
+                    top: '-=100px',
+                    opacity: 1
+                }, 800);
+                observer.unobserve(entry.target);
+            });
+        }
+    });
+}
+
