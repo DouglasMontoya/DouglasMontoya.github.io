@@ -13,129 +13,145 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="./index.html" class="brand">
-        <div id="name">
-          <span id="ld">D</span>
-          <span id="lname">ouglas</span>
+
+  <div class="container">
+    <header class="header">
+      <nav>
+        <a href="./index.html" class="brand">
+          <div id="name">
+            <span id="ld">D</span>
+            <span id="lname">ouglas</span>
+          </div>
+          <div id="surname">
+            <span id="lm">M</span>
+            <span id="lsurname">ontoya</span>
+          </div>
+        </a>
+        <div class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div id="surname">
-          <span id="lm">M</span>
-          <span id="lsurname">ontoya</span>
+        <div class="navbar-menu">
+          <a href="#" class="navbar-item">
+            INICIO
+          </a>
+          <a href="#" class="navbar-item">
+            SOBRE MI
+          </a>
+          <a href="#portfolio" class="navbar-item">
+            PORTAFOLIO
+          </a>
+          <a href="#" class="navbar-item">
+            CONOCIMIENTOS
+          </a>
+          <a href="#" class="navbar-item">
+            CONTACTO
+          </a>
+          <div class="current-section"></div>
         </div>
-      </a>
-      <div class="navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="navbar-menu">
-        <a href="#" class="navbar-item">
-          INICIO
-        </a>
-        <a href="#" class="navbar-item">
-          SOBRE MI
-        </a>
-        <a href="#" class="navbar-item">
-          PORTAFOLIO
-        </a>
-        <a href="#" class="navbar-item">
-          CONOCIMIENTOS
-        </a>
-        <a href="#" class="navbar-item">
-          CONTACTO
-        </a>
-      </div>
-    </nav>
-    <div class="hero">
-      <img src="https://i.imgur.com/c11uLHs.png" alt="Foto del propietario del portafolio" class="img-hero">
-      <div class="container-hero-text">
-        <div class="contaner-anim-hero"></div>
-        <h1>Hola, mi nombre es Douglas</h1>
-        <p>Me apasiona la programación y crear cosas nuevas y únicas con ella. He creado proyectos utilizando
-          tecnologías como HTML, CSS, BulmaCSS, JavaScript, jQuery, Node.js, Python, MySQL y Git. <a href="#">Aquí
-            puedes ver algunos ejemplos</a>.</p>
-        <div class="container-btn-cv">
-          <a href="#"><strong>Ver CV</strong></a>
+      </nav>
+      <div class="hero">
+        <img src="https://i.imgur.com/c11uLHs.png" alt="Foto del propietario del portafolio" class="img-hero">
+        <div class="container-hero-text">
+          <div class="contaner-anim-hero"></div>
+          <h1>Hola, mi nombre es Douglas</h1>
+          <p>Me apasiona la programación y crear cosas nuevas y únicas con ella. He creado proyectos utilizando
+            tecnologías como HTML, CSS, BulmaCSS, JavaScript, jQuery, Node.js, Python, MySQL y Git. <a href="#">Aquí
+              puedes ver algunos ejemplos</a>.</p>
+          <div class="container-btn-cv">
+            <a href="#"><strong>Ver CV</strong></a>
+          </div>
+          <div class="contaner-anim-hero ch-flip"></div>
         </div>
-        <div class="contaner-anim-hero ch-flip"></div>
       </div>
-    </div>
-  </header>
-  <main>
-    <section class="about">
-      <h2 class="title-section">Sobre mi</h2>
-      <div class="container-section-text">
-        <p>
-          Soy una persona apasionada por el mundo de la <strong>programación</strong>. Me encanta aprender cosas nuevas
-          y
-          conocer gente nueva. Aunque soy un Junior y no tengo experiencia laboral como programador, he realizado varios
-          proyectos personales para mejorar mis habilidades y conocimientos en esta área. Algunos de ellos son: una
-          <em>página web educativa</em> con Nodejs, un <em>juego</em> con Pygame y un <em>sistema de control de
-            visitas</em> con Python. Mi objetivo es crear herramientas que ayuden a las personas y que sean útiles,
-          creativas y divertidas. Me considero una persona dedicada, colaboradora y entusiasta por la tecnología y la
-          programación.
-        </p>
-        <br>
-        <p>
-          Tengo 23 años y soy de <strong>Venezuela</strong>, un país lleno de contrastes, belleza y cultura. Me siento
-          orgulloso de mi origen y de mi identidad. Me gusta explorar el mundo a través de la programación y descubrir
-          nuevas formas de expresarme y comunicarme. Mi sueño es trabajar en proyectos que tengan un impacto positivo en
-          la sociedad y que me permitan crecer como profesional y como persona.
-        </p>
-        <br>
-        <p>
-          Me gusta pasar mi tiempo libre programando, leyendo, escuchando música o viendo películas. También disfruto de
-          salir a caminar, respirar aire fresco y apreciar la naturaleza. Soy una persona curiosa, optimista y alegre,
-          que se ríe, hace bromas y se divierte con lo que hace. Además, me encanta el <strong>modelado 3D</strong> con
-          Blender, me apasiona crear imágenes vectoriales creativas con <strong>Inkscape</strong>, y me gusta la
-          <strong>edición de imágenes</strong>. Estas actividades me permiten expresar mi lado artístico y desarrollar
-          mi imaginación.
-        </p>
-      </div>
-    </section>
-    <section class="portfolio">
-      <h2 class="title-section">Portafolio</h2>
-      <div class="cotainer-thumbnails">
-        <div class="c-thumbnail">
-          <div></div>
-          <div class="container-thumb-tech">
-            <img src="./img/eduetica.png" alt="Miniatura del logo de la pagina web educativa">
-            <h4>Pagina web educativa creada con:</h4>
-            <div class="c-tech">
-              <img src="./img/thum_nodejs.png" alt="Miniatura del logo de nodejs">
-              <img src="./img/thum_jquery.png" alt="Miniatura del logo de jquery">
-              <img src="./img/thum_bulma.png" alt="Miniatura del logo de bulma">
-              <img src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
+    </header>
+    <main>
+      <section class="about">
+        <h2 class="title-section">Sobre mi</h2>
+        <div class="container-section-text">
+          <p>
+            Soy una persona apasionada por el mundo de la <strong>programación</strong>. Me encanta aprender cosas
+            nuevas
+            y
+            conocer gente nueva. Aunque soy un Junior y no tengo experiencia laboral como programador, he realizado
+            varios
+            proyectos personales para mejorar mis habilidades y conocimientos en esta área. Algunos de ellos son: una
+            <em>página web educativa</em> con Nodejs, un <em>juego</em> con Pygame y un <em>sistema de control de
+              visitas</em> con Python. Mi objetivo es crear herramientas que ayuden a las personas y que sean útiles,
+            creativas y divertidas. Me considero una persona dedicada, colaboradora y entusiasta por la tecnología y la
+            programación.
+          </p>
+          <br>
+          <p>
+            Tengo 23 años y soy de <strong>Venezuela</strong>, un país lleno de contrastes, belleza y cultura. Me siento
+            orgulloso de mi origen y de mi identidad. Me gusta explorar el mundo a través de la programación y descubrir
+            nuevas formas de expresarme y comunicarme. Mi sueño es trabajar en proyectos que tengan un impacto positivo
+            en
+            la sociedad y que me permitan crecer como profesional y como persona.
+          </p>
+          <br>
+          <p>
+            Me gusta pasar mi tiempo libre programando, leyendo, escuchando música o viendo películas. También disfruto
+            de
+            salir a caminar, respirar aire fresco y apreciar la naturaleza. Soy una persona curiosa, optimista y alegre,
+            que se ríe, hace bromas y se divierte con lo que hace. Además, me encanta el <strong>modelado 3D</strong>
+            con
+            Blender, me apasiona crear imágenes vectoriales creativas con <strong>Inkscape</strong>, y me gusta la
+            <strong>edición de imágenes</strong>. Estas actividades me permiten expresar mi lado artístico y desarrollar
+            mi imaginación.
+          </p>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <h2 class="title-section">Portafolio</h2>
+        <div class="cotainer-thumbnails">
+          <div class="c-thumbnail thum-eduetica">
+            <div></div>
+            <div class="container-thumb-tech">
+              <img src="./img/eduetica.png" alt="Miniatura del logo de la pagina web educativa">
+              <h4>Página web educativa creada con:</h4>
+              <div class="c-tech">
+                <img src="./img/thum_nodejs.png" alt="Miniatura del logo de nodejs">
+                <img src="./img/thum_jquery.png" alt="Miniatura del logo de jquery">
+                <img src="./img/thum_bulma.png" alt="Miniatura del logo de bulma">
+                <img src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
+              </div>
+            </div>
+          </div>
+          <div class="c-thumbnail thum-visits">
+            <div></div>
+            <div class="container-thumb-tech">
+              <img src="./img/siscra.png" alt="Miniatura del logo de la pagina web educativa">
+              <h4>Control de visitas creado con:</h4>
+              <div class="c-tech">
+                <img src="./img/thum_python.png" alt="Miniatura del logo de python">
+                <img src="./img/thum_tkinter.png" alt="Miniatura del logo de tkinter">
+                <img src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
+              </div>
+            </div>
+          </div>
+          <div class="c-thumbnail thum-game">
+            <div></div>
+            <div class="container-thumb-tech">
+              <img src="./img/game.png" alt="Miniatura del juego hecho con Pygame">
+              <h4>Juego de plataforma 2D creado con:</h4>
+              <div class="c-tech">
+                <img src="./img/thum_python.png" alt="Miniatura del logo de python">
+                <img src="./img/thum_pygame.png" alt="Miniatura del logo de pygame">
+              </div>
             </div>
           </div>
         </div>
-        <div class="c-thumbnail">
-          <div></div>
-          <div class="container-thumb-tech">
-            <img src="./img/siscra.png" alt="Miniatura del logo de la pagina web educativa">
-            <h4>Control de visitas creado con:</h4>
-            <div class="c-tech">
-              <img src="./img/thum_python.png" alt="Miniatura del logo de python">
-              <img src="./img/thum_tkinter.png" alt="Miniatura del logo de tkinter">
-            </div>
-          </div>
-        </div>
-        <div class="c-thumbnail">
-          <div></div>
-          <div class="container-thumb-tech">
-            <img src="./img/game.png" alt="Miniatura del juego hecho con Pygame">
-            <h4>Juego de plataforma 2D creado con:</h4>
-            <div class="c-tech">
-              <img src="./img/thum_python.png" alt="Miniatura del logo de python">
-              <img src="./img/thum_pygame.png" alt="Miniatura del logo de pygame">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+      <section class="knowledge" id="knowledge" style="height: 800px;">
+
+      </section>
+      <section class="contact" id="contact" style="height: 800px;">
+
+      </section>
+    </main>
+  </div>
 
 </body>
 <script src="./js/jquery-3.7.0.min.js"></script>
