@@ -1,11 +1,34 @@
+// $('body').scrollTop($('.contact').position().top);
+
+let modeDark = true;
+
+$('.container-mode').on('click', function () {
+    if (modeDark) {
+        modeDark = false;
+        document.documentElement.style.setProperty('--bg-color', '#e6e6e6');
+        document.documentElement.style.setProperty('--color-text-white', '#0f0f0f');
+        $($(this).children()[0]).css({ display: 'none' });
+        $($(this).children()[1]).css({ display: 'block' });
+    } else {
+        modeDark = true;
+        document.documentElement.style.setProperty('--bg-color', '#0f0f0f');
+        document.documentElement.style.setProperty('--color-text-white', '#e6e6e6');
+        $($(this).children()[0]).css({ display: 'block' });
+        $($(this).children()[1]).css({ display: 'none' });
+    }
+});
 
 // Controller events in navbar-burger
 $('.navbar-burger').on('click', () => {
+    showMenu();
+});
+
+function showMenu() {
     $('.navbar-burger').toggleClass('is-active');
     $('body').toggleClass('bodyScrollLock');
     $('.navbar-menu').toggleClass('show-menu');
     $('.img-hero').toggleClass('img-hero-back');
-});
+}
 
 // Load hero animations
 var imgHero = $('.img-hero');
@@ -32,7 +55,7 @@ function loadHeader() {
         $(this).hover(
             function () {
                 $(this).css({
-                    transform: 'translateX(20px)',
+                    transform: 'translateX(10px)',
                 });
             },
             function () {
@@ -63,13 +86,25 @@ function loadHeader() {
         $('<div class="hex"></div>').appendTo('.contaner-anim-hero');
     }
 
+    $('.current-section, .container-mode').animate({ opacity: 1 }, 800);
+
     $('main').css({ 'display': 'block' });
+    setTimeout(function () {
+        loadMain();
+    });
+}
+
+function loadMain() {
+    $('main img').each(function () {
+        var imgSrc = $(this).data('src');
+        $(this).attr('src', imgSrc);
+    });
 }
 
 //Intersection observer
 let options = {
     root: null,
-    rootMargin: "0px 0px -400px 0px",
+    rootMargin: "-50% 0px",
     threshold: 0
 };
 
@@ -86,6 +121,16 @@ function animSection(entries) {
                 elemetsAnim = '.about .title-section, .container-section-text p';
             } else if ($(entry.target).hasClass('portfolio')) {
                 elemetsAnim = '.portfolio .title-section, .cotainer-thumbnails .c-thumbnail';
+            } else if ($(entry.target).hasClass('knowledge')) {
+                elemetsAnim = '.knowledge .title-section, .container-knowledge h3, .tech-logo';
+                $('.container-knowledge h4, .point').each(function (index, element) {
+                    $(this).delay(index * 100).animate({
+                        left: '-=100px',
+                        opacity: 1
+                    }, 600);
+                });
+            } else if ($(entry.target).hasClass('contact')) {
+                elemetsAnim = '.contact .title-section, .container-contact h4, .container-contact a';
             }
             $(elemetsAnim).each(function (index, element) {
                 $(this).delay(index * 100).animate({
@@ -100,11 +145,11 @@ function animSection(entries) {
 
 let optionsTwo = {
     root: null,
-    rootMargin: "0px 0px -400px 0px",
+    rootMargin: "-50% 0px",
     threshold: 0
 };
 
-let observerACS = new IntersectionObserver(animCurrentSection, options);
+let observerACS = new IntersectionObserver(animCurrentSection, optionsTwo);
 document.querySelectorAll('section, header').forEach(element => {
     observerACS.observe(element);
 });
@@ -115,58 +160,107 @@ let widthItem = 0;
 let newSize = 61.39;
 let animating = false;
 let animationQueue = [];
-let widthCS = currentSection.width();
 function animCurrentSection(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            if ($(entry.target).hasClass('about')) {
-                xCurrentItem = $($('.navbar-menu').children()[1]).position().left;
-                widthItem = $($('.navbar-menu').children()[1]).width() + 20;
-                animationQueue.push({xCurrentItem, widthItem});
-                // executeAnim();
+            if ($(entry.target).hasClass('header')) {
+                if (currentSection.position().left > 0) {
+                    obtenerPosWidth(0);
+                }
+            } else if ($(entry.target).hasClass('about')) {
+                obtenerPosWidth(1);
             } else if ($(entry.target).hasClass('portfolio')) {
-                xCurrentItem = $($('.navbar-menu').children()[2]).position().left;
-                widthItem = $($('.navbar-menu').children()[2]).width() + 20;
-                animationQueue.push({xCurrentItem, widthItem});
-                // executeAnim();
+                obtenerPosWidth(2);
             } else if ($(entry.target).hasClass('knowledge')) {
-                xCurrentItem = $($('.navbar-menu').children()[3]).position().left;
-                widthItem = $($('.navbar-menu').children()[3]).width() + 20;
-                animationQueue.push({xCurrentItem, widthItem});
-                // executeAnim();
+                obtenerPosWidth(3);
             } else if ($(entry.target).hasClass('contact')) {
-                xCurrentItem = $($('.navbar-menu').children()[4]).position().left;
-                widthItem = $($('.navbar-menu').children()[4]).width() + 20;
-                animationQueue.push({xCurrentItem, widthItem});
-                // executeAnim();
+                obtenerPosWidth(4);
             }
         }
-        function executeAnim(xCurrentItem, widthItem){
-            if(currentSection.position().left < xCurrentItem){
+
+        function obtenerPosWidth(index) {
+            xCurrentItem = $($('.navbar-menu').children()[index]).position().left;
+            widthItem = $($('.navbar-menu').children()[index]).width() + 20;
+            animationQueue.push({ xCurrentItem, widthItem });
+            if (animationQueue.length <= 1 && !animating) {
+                executeAnim(animationQueue[0].xCurrentItem, animationQueue[0].widthItem);
+            }
+        }
+
+        function executeAnim(xCurrentItem, widthItem) {
+            if (currentSection.position().left < xCurrentItem) {
                 newSize = (xCurrentItem + widthItem) - currentSection.position().left;
                 currentSection.animate({
                     width: `${newSize}`,
-                },200);
+                }, 150);
                 currentSection.animate({
                     left: `${xCurrentItem}`,
                     width: `${widthItem}`
-                },200, function(){
+                }, 150, function () {
                     animationQueue.shift();
                     animating = false;
+                    if (animationQueue.length > 0) {
+                        executeAnim(animationQueue[0].xCurrentItem, animationQueue[0].widthItem);
+                    }
+                });
+            } else {
+                newSize = (currentSection.position().left + currentSection.width()) - xCurrentItem;
+                currentSection.animate({
+                    width: `${newSize}`,
+                    left: `${xCurrentItem}`
+                }, 150);
+                currentSection.animate({
+                    width: `${widthItem}`
+                }, 150, function () {
+                    animationQueue.shift();
+                    animating = false;
+                    if (animationQueue.length > 0) {
+                        executeAnim(animationQueue[0].xCurrentItem, animationQueue[0].widthItem);
+                    }
                 });
             }
         }
-
-        setInterval(function() {
-            if (animationQueue.length > 0 && !animating){
-                animating = true;
-                executeAnim(animationQueue[0].xCurrentItem, animationQueue[0].widthItem);
-            }
-        });
     });
 }
 
-
+$('.navbar-item, .container-hero-text span').on('click', function () {
+    let positionY = 0;
+    let home = 1;
+    if (window.innerWidth <= 768) {
+        showMenu();
+    }
+    if ($(this).attr('id') === 'home') {
+        home = 0;
+    }
+    else if ($(this).attr('id') === 'about') {
+        if (window.innerWidth > 768) {
+            positionY = $('.about').position().top - 100;
+        } else {
+            positionY = $('.about').position().top;
+        }
+    }
+    else if ($(this).attr('id') === 'portfolio' || $(this).attr('id') === 'porta') {
+        positionY = $('.portfolio').position().top;
+    }
+    else if ($(this).attr('id') === 'knowledge') {
+        positionY = $('.knowledge').position().top;
+    }
+    else if ($(this).attr('id') === 'contact') {
+        positionY = $('.contact').position().top;
+    }
+    positionY = (positionY + $('body').scrollTop()) * home;
+    home = 1;
+    document.querySelectorAll('section, header').forEach(element => {
+        observerACS.unobserve(element);
+    });
+    $('body').animate({
+        scrollTop: positionY
+    }, 250, function () {
+        document.querySelectorAll('section, header').forEach(element => {
+            observerACS.observe(element);
+        });
+    });
+});
 
 $('.c-thumbnail').on('click', function () {
     $('body').toggleClass('bodyScrollLock');
@@ -179,10 +273,15 @@ $('.c-thumbnail').on('click', function () {
         <div class="equis"><span class="line"></span><span class="line"></span></div>
         <h3></h3>
         <div class="container-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Kow2YegIdYU" title="YouTube video player"
-            frameborder="0"
+        <div class="cont-iframe">
+            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen>
+            </iframe>
+            <div>
+            <p>Cargando Video</p>
+            </div>
+        </div>
             <a target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
                 viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
@@ -203,7 +302,7 @@ $('.c-thumbnail').on('click', function () {
     if ($(this).hasClass('thum-eduetica')) {
         $('.container-project h3').text('Página Web Educativa');
         $('.description').text(`
-        Este proyecto es una web educativa que enseña sobre la ética profesional. 
+        Este proyecto que hice en la Universidad el cual es una web educativa que enseña sobre la ética profesional. 
         La web tiene dos tipos de usuarios: profesor y alumno. El alumno tiene que 
         pasar los módulos y completar las diferentes pruebas que le sumarán puntos. 
         El profesor tiene la capacidad de ver el progreso de todos sus alumnos, el 
@@ -222,9 +321,10 @@ $('.c-thumbnail').on('click', function () {
         animaciones y agregado de interacción con AJAX a páginas web.<br>
         • <strong>MySQL</strong>: Sistema de gestión de bases de datos relacionales que almacena y 
         organiza la información de la web.<br>
-        • <strong>BulmaCSS</strong>: framework CSS que provee componentes y estilos para crear interfaces web 
+        • <strong>BulmaCSS</strong>: Framework CSS que provee componentes y estilos para crear interfaces web 
         responsivas y modernas.
         `;
+        $('.container-video iframe').attr('src', 'https://www.youtube.com/embed/a5g1gu9XwYw');
         $('.container-video a').attr('href', 'https://github.com/DouglasMontoya/web-educativa');
     } else if ($(this).hasClass('thum-visits')) {
         $('.container-project h3').text('Sistema de Control de Visitas y Reporte');
@@ -262,6 +362,7 @@ $('.c-thumbnail').on('click', function () {
         • <strong>MySQL</strong>: Sistema de gestión de bases de datos relacionales que almacena y 
         organiza la información de la web.<br>
         `;
+        $('.container-video iframe').attr('src', 'https://www.youtube.com/embed/Kow2YegIdYU');
         $('.container-video a').remove();
     } else if ($(this).hasClass('thum-game')) {
         $('.container-project h3').text('Juego de Plataforma 2D');
@@ -286,8 +387,12 @@ $('.c-thumbnail').on('click', function () {
         otras aplicaciones multimedia. Tiene muchas funciones para gráficos, sonido, entrada y 
         más.<br>
         `;
+        $('.container-video iframe').attr('src', 'https://www.youtube.com/embed/RjDhDckmmP0');
         $('.container-video a').attr('href', 'https://github.com/DouglasMontoya/plataform-game-2d');
     }
+    $('.container-video iframe').on('load', function () {
+        $('.cont-iframe div').remove();
+    });
 
     $('.equis, .modal-portfolio').on('click', (event) => {
         if (event.target === event.currentTarget || $(event.target).hasClass('equis') || $(event.target).hasClass('line')) {

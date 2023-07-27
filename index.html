@@ -5,19 +5,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Douglas Montoya</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicons/apple-touch-icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicons/android-icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-
+  <div class="container-mode">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+      <path
+        d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
+      <path
+        d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+    </svg>
+  </div>
   <div class="container">
-    <header class="header">
+    <header class="header" id="header">
       <nav>
-        <a href="./index.html" class="brand">
+        <a class="brand" href="https://douglasmontoya.github.io">
           <div id="name">
             <span id="ld">D</span>
             <span id="lname">ouglas</span>
@@ -33,73 +55,64 @@
           <span></span>
         </div>
         <div class="navbar-menu">
-          <a href="#" class="navbar-item">
+          <a class="navbar-item" id="home">
             INICIO
           </a>
-          <a href="#" class="navbar-item">
+          <a class="navbar-item" id="about">
             SOBRE MI
           </a>
-          <a href="#portfolio" class="navbar-item">
+          <a class="navbar-item" id="portfolio">
             PORTAFOLIO
           </a>
-          <a href="#" class="navbar-item">
+          <a class="navbar-item" id="knowledge">
             CONOCIMIENTOS
           </a>
-          <a href="#" class="navbar-item">
+          <a class="navbar-item" id="contact">
             CONTACTO
           </a>
           <div class="current-section"></div>
         </div>
       </nav>
       <div class="hero">
-        <img src="https://i.imgur.com/c11uLHs.png" alt="Foto del propietario del portafolio" class="img-hero">
+        <img src="./img/img-hero.webp" alt="Foto del propietario del portafolio" class="img-hero">
         <div class="container-hero-text">
           <div class="contaner-anim-hero"></div>
           <h1>Hola, mi nombre es Douglas</h1>
           <p>Me apasiona la programación y crear cosas nuevas y únicas con ella. He creado proyectos utilizando
-            tecnologías como HTML, CSS, BulmaCSS, JavaScript, jQuery, Node.js, Python, MySQL y Git. <a href="#">Aquí
-              puedes ver algunos ejemplos</a>.</p>
+            tecnologías como HTML, CSS, BulmaCSS, JavaScript, jQuery, Node.js, Python, MySQL y Git. <span
+              id="porta">Aquí
+              puedes ver algunos ejemplos</span>.</p>
           <div class="container-btn-cv">
-            <a href="#"><strong>Ver CV</strong></a>
+            <a href="https://drive.google.com/file/d/1S-vcYsDQq80YzUSQikboAcbAZd_f3Zfw/view?usp=sharing"
+              target="_blank"><strong>Ver CV</strong></a>
           </div>
           <div class="contaner-anim-hero ch-flip"></div>
         </div>
       </div>
     </header>
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="title-section">Sobre mi</h2>
         <div class="container-section-text">
           <p>
             Soy una persona apasionada por el mundo de la <strong>programación</strong>. Me encanta aprender cosas
             nuevas
             y
-            conocer gente nueva. Aunque soy un Junior y no tengo experiencia laboral como programador, he realizado
-            varios
-            proyectos personales para mejorar mis habilidades y conocimientos en esta área. Algunos de ellos son: una
+            conocer gente nueva. Aunque no tengo experiencia laboral como programador, he realizado
+            varios proyectos personales para mejorar mis habilidades y conocimientos en esta área. Algunos de ellos son:
+            una
             <em>página web educativa</em> con Nodejs, un <em>juego</em> con Pygame y un <em>sistema de control de
-              visitas</em> con Python. Mi objetivo es crear herramientas que ayuden a las personas y que sean útiles,
-            creativas y divertidas. Me considero una persona dedicada, colaboradora y entusiasta por la tecnología y la
+              visitas</em> con Python. Mi objetivo es trabajar en proyectos que tengan un impacto positivo en la
+            sociedad y que me permitan crecer como profesional y como persona y crear herramientas que ayuden y que sean
+            útiles, creativas y divertidas. Soy una persona dedicada, colaboradora y entusiasta por la tecnología y la
             programación.
           </p>
           <br>
           <p>
-            Tengo 23 años y soy de <strong>Venezuela</strong>, un país lleno de contrastes, belleza y cultura. Me siento
-            orgulloso de mi origen y de mi identidad. Me gusta explorar el mundo a través de la programación y descubrir
-            nuevas formas de expresarme y comunicarme. Mi sueño es trabajar en proyectos que tengan un impacto positivo
-            en
-            la sociedad y que me permitan crecer como profesional y como persona.
-          </p>
-          <br>
-          <p>
-            Me gusta pasar mi tiempo libre programando, leyendo, escuchando música o viendo películas. También disfruto
-            de
-            salir a caminar, respirar aire fresco y apreciar la naturaleza. Soy una persona curiosa, optimista y alegre,
-            que se ríe, hace bromas y se divierte con lo que hace. Además, me encanta el <strong>modelado 3D</strong>
-            con
-            Blender, me apasiona crear imágenes vectoriales creativas con <strong>Inkscape</strong>, y me gusta la
-            <strong>edición de imágenes</strong>. Estas actividades me permiten expresar mi lado artístico y desarrollar
-            mi imaginación.
+            Me gusta pasar mi tiempo libre informándome sobre nuevas tecnologías, escuchando música o viendo películas.
+            Además, me encanta el <strong>modelado 3D</strong> con Blender, me apasiona crear imágenes vectoriales
+            creativas con <strong>Inkscape</strong>, y me gusta la <strong>edición de imágenes</strong>. Estas
+            actividades me permiten expresar mi lado artístico y desarrollar mi imaginación.
           </p>
         </div>
       </section>
@@ -109,46 +122,208 @@
           <div class="c-thumbnail thum-eduetica">
             <div></div>
             <div class="container-thumb-tech">
-              <img src="./img/eduetica.png" alt="Miniatura del logo de la pagina web educativa">
+              <img data-src="./img/eduetica.png" alt="Miniatura del logo de la pagina web educativa">
               <h4>Página web educativa creada con:</h4>
               <div class="c-tech">
-                <img src="./img/thum_nodejs.png" alt="Miniatura del logo de nodejs">
-                <img src="./img/thum_jquery.png" alt="Miniatura del logo de jquery">
-                <img src="./img/thum_bulma.png" alt="Miniatura del logo de bulma">
-                <img src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
+                <img data-src="./img/thum_nodejs.png" alt="Miniatura del logo de nodejs">
+                <img data-src="./img/thum_jquery.png" alt="Miniatura del logo de jquery">
+                <img data-src="./img/thum_bulma.png" alt="Miniatura del logo de bulma">
+                <img data-src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
               </div>
             </div>
           </div>
           <div class="c-thumbnail thum-visits">
             <div></div>
             <div class="container-thumb-tech">
-              <img src="./img/siscra.png" alt="Miniatura del logo de la pagina web educativa">
+              <img data-src="./img/siscra.png" alt="Miniatura del logo del sistema de control de visitas">
               <h4>Control de visitas creado con:</h4>
               <div class="c-tech">
-                <img src="./img/thum_python.png" alt="Miniatura del logo de python">
-                <img src="./img/thum_tkinter.png" alt="Miniatura del logo de tkinter">
-                <img src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
+                <img data-src="./img/thum_python.png" alt="Miniatura del logo de python">
+                <img data-src="./img/thum_tkinter.png" alt="Miniatura del logo de tkinter">
+                <img data-src="./img/thum_mysql.png" alt="Miniatura del logo de mysql">
               </div>
             </div>
           </div>
           <div class="c-thumbnail thum-game">
             <div></div>
             <div class="container-thumb-tech">
-              <img src="./img/game.png" alt="Miniatura del juego hecho con Pygame">
+              <img data-src="./img/game.png" alt="Miniatura del juego hecho con Pygame">
               <h4>Juego de plataforma 2D creado con:</h4>
               <div class="c-tech">
-                <img src="./img/thum_python.png" alt="Miniatura del logo de python">
-                <img src="./img/thum_pygame.png" alt="Miniatura del logo de pygame">
+                <img data-src="./img/thum_python.png" alt="Miniatura del logo de python">
+                <img data-src="./img/thum_pygame.png" alt="Miniatura del logo de pygame">
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="knowledge" id="knowledge" style="height: 800px;">
-
+      <section class="knowledge" id="knowledge">
+        <h2 class="title-section">Conocimientos</h2>
+        <div class="container-knowledge">
+          <h4 class="beginner">Principiante</h4>
+          <h4>Elemental</h4>
+          <h4>Intermediario</h4>
+          <h4>Avanzado</h4>
+          <h4>Experto</h4>
+          <div class="html">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M10.264 2.435H2.949l.394 4.404 5.064.02-.17 1.89-1.626.436-1.624-.44-.105-1.161-1.475-.004.21 2.295 2.994.837 2.985-.838.403-4.47-5.314-.034-.128-1.472h5.578z"
+                style="fill:#fff;stroke-width:.211667" transform="translate(0 -.004)" />
+              <path
+                d="M8.05 11.141a.02.02 0 0 1 .013 0c.004.002.001.003-.006.003s-.01-.001-.006-.003zm.012-1.103v-.476c-.001-.002.42-.12.934-.263l.937-.261c.002-.002.253-2.79.253-2.807 0-.005-.337-.006-1.668-.007-.918 0-1.396-.002-1.063-.003l.607-.001v-.934h2.21v-.011l.04-.447c.023-.24.041-.441.041-.448v-.012H8.062v-.913h1.496c1.194 0 1.496.001 1.496.006 0 .023-.57 6.369-.572 6.37-.002.002-.543.154-1.202.338l-1.21.338c-.007.003-.008-.022-.008-.47zM8.06 7.872v-.734h.563c.452 0 .564.002.564.007 0 .012-.106 1.186-.107 1.187-.001 0-.788.212-.95.254l-.07.02ZM6.847 6.187c0-.008.001-.011.003-.006a.029.029 0 0 1 0 .015c-.002.004-.003 0-.003-.009z"
+                style="fill:#ef6428;stroke-width:.00504596" transform="matrix(1.59297 0 0 1.59297 -6.228 -4.527)" />
+              <path
+                d="m6.556 10.728-1.485-.413c-.002-.002-.667-7.443-.667-7.464 0-.006.735-.007 3.658-.007s3.658.001 3.658.007c0 .027-.665 7.457-.667 7.46-.006.005-2.987.829-3 .828-.008 0-.681-.185-1.497-.411zm2.724-.559c.66-.184 1.2-.336 1.202-.337.002-.002.572-6.348.572-6.37 0-.006-.302-.007-1.496-.007H8.062v.913h-2.3v.012l.123 1.38.123 1.373c0 .004.288.006 1.026.007H8.06v.731c.002.402 0 .73-.002.73-.006 0-1.015-.27-1.018-.273a18.846 18.846 0 0 1-.034-.365L6.974 7.6l-.463-.001-.463-.002.003.024.066.72c.034.382.063.696.064.697l.94.264.939.262.001.473c.001.447.002.473.01.47l1.209-.338zM6.85 6.21l-.04-.455a55.22 55.22 0 0 1-.04-.457v-.012h1.291v.934h-.605c-.594 0-.606 0-.606-.01z"
+                style="fill:#e34c25;stroke-width:.00504596" transform="matrix(1.59297 0 0 1.59297 -6.228 -4.527)" />
+            </svg>
+            <h3>HTML</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="css">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M-14.15 1.835h8.372l-.778 8.501-3.409.957-3.422-.967-.233-2.601 1.742-.035.07 1.341 1.853.516 1.846-.503.194-2.165-5.78.013-.155-1.675h6.082l.155-1.7-6.385-.015z"
+                style="fill:#fff;stroke-width:.211667" transform="matrix(.87547 0 0 .87547 15.33 .824)" />
+              <path
+                d="M5.65 13.105c.014-.005.03-.005.037.002.006.006-.005.01-.025.01-.022-.001-.027-.006-.011-.012zm.019-2.007-.005-.865 1.696-.47c.933-.258 1.704-.474 1.712-.48.015-.008.096-.9.586-6.404.093-1.044.175-1.943.181-1.997l.011-.1H5.673V-.88h2.72c2.62 0 2.72.001 2.72.034 0 .02-.161 1.845-.359 4.057a170975.237 170975.237 0 0 0-.625 7.017c-.023.266-.05.49-.062.503-.017.017-1.396.403-4.238 1.188l-.155.043zm.004-3.928V5.845L3.798 5.84c-1.438-.003-1.2-.006 1.02-.01l2.895-.004v.062c-.001.1-.184 2.093-.193 2.103-.007.006-1.578.435-1.805.492l-.042.01zm-.004-3.856.005-.85h2.341c0 .036-.132 1.522-.143 1.61l-.011.09H5.664z"
+                style="fill:#2864ef;stroke-width:.0188905" transform="matrix(.87547 0 0 .87547 1.648 1.746)" />
+              <path
+                d="M2.925 12.35C1.45 11.94.24 11.602.236 11.598.23 11.592-.976-1.892-.976-1.962c0-.03.329-.032 6.649-.032 5.91 0 6.65.003 6.65.028 0 .054-1.209 13.56-1.214 13.564-.019.017-5.417 1.5-5.455 1.5-.026-.001-1.254-.337-2.729-.748zm5.09-1.036c1.117-.31 2.04-.572 2.052-.583.011-.012.04-.237.062-.503a396.133 396.133 0 0 1 .2-2.248l.425-4.769c.198-2.212.36-4.038.36-4.057 0-.033-.101-.034-2.72-.034H5.672V.782H1.478l.01.09c.014.111.142 1.527.142 1.565 0 .023.28.027 2.022.027h2.021l-.005.845-.004.845-1.943.005-1.943.005.011.09c.01.07.144 1.557.144 1.585 0 .003.841.006 1.87.006h1.87V7.17c0 1.252-.002 1.323-.033 1.313l-.921-.25a18.39 18.39 0 0 1-.898-.254 12.492 12.492 0 0 1-.063-.635c-.029-.34-.057-.634-.062-.653-.008-.03-.065-.033-.848-.033-.462 0-.84.007-.84.015 0 .026.227 2.563.232 2.59.003.02.52.171 1.714.503l1.71.475.004.86.005.862.156-.043 2.186-.605z"
+                style="fill:#254ce3;stroke-width:.0188905" transform="matrix(.87547 0 0 .87547 1.648 1.746)" />
+            </svg>
+            <h3>CSS</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="js">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M8.725 1.668H6.851v2.55l1.157-.212-.038.584-1.115.31-.002.685 1.572-.414.15-1.899-1.146.131-.014-1.037H8.65zM5.792 1.668v3.068L4.66 4.432l-.046.048.038.625.019.004 1.679.478h.027v-3.92z"
+                style="fill:#fff;stroke-width:.211667" transform="matrix(1.9905 0 0 1.9905 -6.513 -.763)" />
+              <path
+                d="M6.609 3.735 6.615.913 7.817.907 9.02.9l-.014.119a123.1 123.1 0 0 0-.103 1.132l-.216 2.434a35.69 35.69 0 0 1-.143 1.437c-.015.015-1.883.535-1.924.535-.01 0-.014-1.27-.011-2.823ZM7.708 5.36c.39-.1.713-.186.717-.19.01-.007.16-1.889.15-1.898-.003-.004-.26.024-.57.062l-.576.07c-.008 0-.014-.234-.014-.52v-.518H8.65l.013-.084a5.03 5.03 0 0 0 .026-.287 3.5 3.5 0 0 1 .025-.265l.011-.062H6.851v2.55l.062-.013c.034-.008.265-.049.513-.092.248-.044.48-.085.516-.093l.066-.014-.014.287a2.438 2.438 0 0 1-.024.297c-.005.006-.255.076-.555.155-.3.08-.551.15-.56.154a2.08 2.08 0 0 0-.008.348l.006.338.073-.02c.04-.012.391-.104.782-.205Z"
+                style="fill:#fdd638;stroke-width:.0225369" transform="matrix(1.9905 0 0 1.9905 -6.513 -.763)" />
+              <path
+                d="M6.198 6.919c-.205-.06-.687-.196-1.07-.304l-.8-.224c-.075-.021-.107-.043-.119-.083-.008-.03-.088-.87-.176-1.868A1070.04 1070.04 0 0 0 3.684.513l-.013-.13h2.931c2.525 0 2.931.005 2.931.032 0 .018-.05.594-.112 1.28a902.932 902.932 0 0 0-.398 4.463l-.015.196-.115.033c-1.105.312-2.305.645-2.315.642l-.38-.11Zm1.384-.62c.52-.142.953-.267.962-.276.01-.01.074-.656.143-1.437l.216-2.434c.05-.558.096-1.067.103-1.132L9.02.9 7.817.907 6.615.913l-.006 2.822c-.003 1.553.002 2.823.011 2.823.01 0 .443-.116.962-.259zM6.378 3.63V1.667h-.586v3.068l-.049-.016a18.16 18.16 0 0 0-1.083-.288c-.031.019-.02.657.01.677.03.019 1.63.474 1.68.478.022.002.028-.404.028-1.959z"
+                style="fill:#d8b72b;stroke-width:.0225369" transform="matrix(1.9905 0 0 1.9905 -6.513 -.763)" />
+            </svg>
+            <h3>JavaScript</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="jq">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M6.692 12.918c-.826-.064-1.374-.192-2.063-.48a8.661 8.661 0 0 1-1.864-1.11c-.326-.26-.99-.938-1.25-1.277C.6 8.859.104 7.529.06 6.149c-.028-.87.117-1.608.454-2.312.186-.39.306-.57.773-1.163.503-.64.52-.659.437-.49-.202.408-.377 1.019-.446 1.563a6.682 6.682 0 0 0 .027 1.55c.055.35.191.882.31 1.205.133.366.498 1.09.703 1.396.731 1.093 1.59 1.891 2.704 2.514.82.458 1.593.717 2.562.858.37.054 1.63.046 2.001-.013 1.303-.206 2.449-.797 3.156-1.628.091-.106.169-.19.173-.186.02.02-.263.541-.427.789-.992 1.5-2.466 2.411-4.28 2.648a9.512 9.512 0 0 1-1.515.038zM8.63 8.793a4.649 4.649 0 0 1-1.034-.177c-1.611-.521-2.89-1.728-3.449-3.255-.18-.495-.292-1.215-.259-1.68.061-.852.256-1.37.822-2.184.424-.61.455-.648.355-.443-.354.722-.45 1.677-.256 2.55.159.72.538 1.476 1.036 2.067a5.546 5.546 0 0 0 1.842 1.45c1.04.507 2.21.67 3.237.45.864-.184 1.64-.644 2.17-1.287.075-.09.135-.148.135-.129 0 .067-.282.604-.421.804A4.108 4.108 0 0 1 11.2 8.347c-.725.354-1.597.505-2.571.446Zm1.214-3.637c-.383-.063-.852-.261-1.259-.534-.255-.17-.735-.65-.904-.901-.384-.576-.548-1.132-.515-1.755.019-.373.101-.693.257-.999.063-.123.448-.683.47-.683a.395.395 0 0 1-.043.12c-.115.261-.155.454-.168.81-.01.285-.004.394.038.595.24 1.138 1.077 2.077 2.208 2.476.394.14.751.196 1.221.195.493-.001.693-.045 1.07-.234.18-.09.29-.168.43-.304.16-.157.18-.17.14-.092a3.301 3.301 0 0 1-.476.633c-.288.288-.67.509-1.08.624-.207.057-.3.067-.704.075a4.096 4.096 0 0 1-.685-.026z"
+                style="fill:#0767ab;stroke-width:.0258382" transform="matrix(.87987 0 0 .87987 .77 .8)" />
+            </svg>
+            <h3>JQuery</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="bulma">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.0 50.0">
+              <path
+                d="M117.605 18.16c-3.392-3.551-6.353-6.694-6.578-6.984-.322-.415-.13-2.572.89-10.056l1.3-9.527 5.238-5.501 5.238-5.5 3.703 3.839c2.037 2.112 5 5.19 6.583 6.839l2.879 2.999-3.836 4.04c-2.11 2.222-3.836 4.14-3.836 4.265 0 .123 2.248 2.572 4.997 5.441 2.748 2.87 4.996 5.354 4.996 5.522 0 .167-2.52 2.061-5.6 4.208-3.08 2.147-6.545 4.571-7.702 5.387l-2.103 1.482z"
+                style="fill:#01d0b1;stroke-width:.344608" transform="translate(-100.032 22.397)" />
+            </svg>
+            <h3>BulmaCSS</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="sql">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50 50">
+              <circle cx="25" cy="25" r="25" style="fill:#006089;fill-opacity:1;stroke-width:1.43583" />
+              <path
+                d="m33.395 41.901-.471-.435-.129.016c-.07.01-.624.025-1.23.035-.973.017-1.13.013-1.342-.03-.795-.163-1.23-.497-1.342-1.029-.024-.114-.03-.634-.024-1.852l.009-1.693.093-.19c.167-.345.491-.575 1.021-.727.225-.064.254-.065 1.844-.065s1.618.001 1.843.065c.53.152.854.382 1.021.727l.093.19.008 1.75c.008 1.69.006 1.757-.05 1.944a1 1 0 0 1-.483.575.518.518 0 0 0-.145.09c-.001.01.25.248.556.53.306.28.557.516.557.524 0 .007-.305.012-.679.011h-.678zm-1.365-1.248a17.992 17.992 0 0 0-.474-.44l-.414-.377.685-.008.684-.007.424.39c.234.216.436.391.45.39.043 0 .146-.101.223-.215l.073-.11V38.73c0-1.723.006-1.662-.197-1.832-.21-.176-.293-.186-1.575-.186-1.03 0-1.173.005-1.3.05-.206.073-.348.18-.415.313-.056.112-.058.156-.05 1.64.007 1.43.011 1.533.062 1.636.067.137.206.247.398.314.125.044.25.052.817.052l.67.001-.06-.065zm10.15.904a.888.888 0 0 1-.644-.5c-.09-.204-.093-.551-.005-.748a.99.99 0 0 1 .433-.44c.19-.088.567-.088.747.002a.918.918 0 0 1 .447 1.125c-.126.38-.583.641-.979.56zm.335-.186c.346-.059.588-.514.48-.904-.052-.19-.28-.425-.455-.472-.551-.148-1.015.344-.858.911a.79.79 0 0 0 .32.408c.094.05.3.096.366.083l.147-.026zm-.519-.696v-.506h.222c.396 0 .521.074.521.306 0 .13-.045.19-.18.241-.089.035-.092.023.071.269.06.09.11.172.11.18 0 .01-.038.016-.084.016-.073 0-.1-.026-.21-.21-.108-.182-.137-.21-.216-.218l-.09-.01v.22c0 .214-.002.218-.072.218h-.072v-.506zm.538-.107c.054-.055.041-.19-.021-.225a.627.627 0 0 0-.215-.03h-.159v.29h.18c.102 0 .195-.015.215-.035zm-19.797.544v-.39l1.793-.011c1.362-.009 1.822-.02 1.914-.049.165-.05.37-.238.41-.374.02-.066.028-.258.022-.483-.011-.407-.04-.49-.215-.605-.18-.12-.328-.136-1.424-.158-1.024-.02-1.066-.024-1.339-.099-.607-.167-.999-.46-1.107-.827-.019-.062-.027-.328-.021-.682l.01-.58.093-.192c.114-.234.284-.394.563-.528.477-.231.645-.246 2.865-.246h1.808v.809h-1.781c-1.8 0-2.033.012-2.195.108-.145.087-.18.193-.192.576-.016.543.064.739.353.869.1.045.248.053 1.243.07 1.091.017 1.138.02 1.402.091.501.135.888.381 1.041.66l.086.158v.607c0 .732-.022.822-.26 1.084-.183.2-.527.393-.884.497-.226.066-.24.067-2.207.076l-1.979.009zm14.387.355c-.89-.13-1.402-.496-1.525-1.09-.022-.105-.032-.837-.032-2.321v-2.169h1.2v2.185c0 2.39-.006 2.303.169 2.452.206.175.217.176 2.167.188l1.779.01v.777l-1.793-.003c-.986-.002-1.87-.015-1.965-.029z"
+                style="fill:#e38d01;stroke-width:.0287516" />
+              <path
+                d="M16.136 42.803v-.405l2.021-.008c1.996-.008 2.024-.009 2.152-.07.25-.118.327-.284.308-.661l-.01-.174-1.514-.016c-1.652-.017-1.695-.021-2.144-.198-.271-.106-.47-.236-.61-.398-.229-.261-.217-.166-.226-1.81l-.008-1.469H17.276l.009 1.396c.008 1.394.008 1.396.073 1.501.04.064.118.133.2.174l.135.068 1.464.008 1.465.009v-3.156H21.825l-.009 2.264c-.008 2.121-.012 2.273-.062 2.408-.152.414-.49.667-1.146.858-.228.066-.237.066-2.35.075l-2.122.01zm-5.534-1.245a.982.982 0 0 1-.69-.511c-.032-.062-.47-1.049-.977-2.195a111.064 111.064 0 0 0-.946-2.11c-.016-.016-.026.943-.026 2.365V41.5H6.79v-2.511c0-2.77-.006-2.677.179-2.867a.903.903 0 0 1 .194-.147c.135-.07.507-.163.742-.186.482-.046.941.172 1.154.548.036.063.463 1.05.949 2.191a87.06 87.06 0 0 0 .9 2.076c.008 0 .406-.889.883-1.975 1.01-2.299 1.024-2.33 1.177-2.497.312-.343.9-.438 1.511-.245.398.125.55.295.598.67.015.12.027 1.241.028 2.579v2.364h-1.2v-2.392c0-1.322-.01-2.38-.024-2.365-.013.015-.426.939-.917 2.053a135.145 135.145 0 0 1-.995 2.22c-.126.247-.329.438-.53.5-.174.055-.669.08-.838.043z"
+                style="fill:#fff;stroke-width:.0287516" />
+              <path
+                d="M25.897 31.627c-2.014-1.472-3.89-3.142-5.068-5.83-.292 3.336-1.102 3.377-1.626 3.266-1.865-.72-2.722-2.76-2.737-5.907.231-3.646.862-4.324.862-4.324-1.42-1.523-2.09-3.992-2.58-5.638-.133-.45-.375-.8-.6-1.067-1.246-1.682-2.879-3.523-1.565-4.837.71-.753 1.993-.426 2.785-.14 1.7.546 2.493 1.54 2.809 1.6 4.83-.113 9.014 4.393 9.414 4.878 3.487 3.848 4.308 6.806 4.308 6.806.343 1.216 2.278 5.01 2.438 5.07.25.347.888.525 1.297.719 1.622.77 5.29 2.656 6.241 4.932-1.103.254-.007.107-4.48.974.544 1.082 1.842 1.482 2.773 2.214 1.599 1.035 2.681 3.141 2.681 3.141-.93-.772-1.856-1.535-2.684-1.905-1.015-.498-2.023-.927-3.08-1.844-.713-.591-1.15-1.305-1.424-2.093 1.286-.994 3.174-.85 4.876-1.058-1.635-1.478-3.082-2.513-6.886-3.976-.87-.213-1.369-3.301-4.084-8.304-5.462-8.391-10.313-8.365-11.882-8.43-1.52-1.365-3.777-2.25-4.292-1.923-.522.236-.482 1.037.071 1.7.836 1 1.79 2.381 1.74 2.414 0 0 .477.954.567 1.197.633 2.884 1.538 4.033 2.446 5.165.265.996-.347 1.599-.52 2.398-.6 3.666.026 6.93 1.423 7.096.37-1.585.11-3.261 1.647-4.676 1.338 3.195 2.817 6.24 5.13 8.382z"
+                style="fill:#fff;stroke:none;stroke-width:.1;stroke-linejoin:round;stroke-dasharray:none;fill-opacity:1" />
+              <path d="M19.171 11.622s.954.767.986 1.283l.032.517s.561-.933.319-1.345c-.243-.412-1.337-.455-1.337-.455Z"
+                style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:.1;stroke-linejoin:round;stroke-dasharray:none" />
+            </svg>
+            <h3><span>My</span>SQL</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="njs">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50 50">
+              <path
+                d="M24.159 49.784c-.81-.362-19.94-11.435-20.287-11.743-.79-.698-.775-.44-.775-13.06 0-11.252.017-11.916.309-12.46.268-.5 1.676-1.368 10.625-6.55C24.047.174 24.369.002 25.097.07c.62.057 2.494 1.077 10.75 5.848 5.5 3.178 10.166 5.965 10.37 6.192.203.227.448.709.545 1.07.12.44.162 4.447.131 12.205-.054 13.567.185 12.155-2.296 13.588-12.256 7.083-18.16 10.482-18.515 10.66-.696.348-1.365.401-1.923.151z"
+                style="fill:#509d41;stroke-width:.166667" />
+            </svg>
+            <h3>Node<span>JS</span></h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="pt">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M102.95 157.796c-4.704-.271-7.843-.94-10.505-2.236-2.915-1.42-4.668-3.434-5.191-5.967-.08-.385-.088-1.348-.084-9.588.003-5.68.025-9.347.059-9.652.257-2.32 1.042-4.073 2.46-5.494 1.5-1.501 3.728-2.5 6.286-2.817.583-.072 2.006-.084 10.279-.09 5.28-.002 9.835-.027 10.121-.054 1.895-.181 3.436-.682 4.753-1.545 2.25-1.474 3.65-3.874 4.196-7.2.084-.507.097-1.158.115-5.55.011-2.735.027-4.98.034-4.988.008-.008 1.588-.016 3.51-.018 3.306-.003 3.53.003 4.075.109 2.923.565 5.36 2.628 6.944 5.88 1.218 2.501 1.862 5.197 2.195 9.188.106 1.273.09 5.172-.027 6.426-.493 5.277-1.89 8.943-4.358 11.43-1.437 1.45-3.126 2.375-5.164 2.83l-.66.148-13.467.016-13.466.015v2.514h17.992l.005 1.381.014 4.744.009 3.364-.154.492c-.578 1.846-1.946 3.276-4.228 4.419-2.472 1.237-5.86 1.968-10.302 2.22-.733.042-4.816.06-5.441.023zm13.152-5.77c.715-.17 1.485-.723 1.912-1.372.642-.98.683-2.336.102-3.362-.35-.618-1.003-1.168-1.686-1.42-.971-.36-2.08-.221-2.954.368-1.152.78-1.668 2.295-1.237 3.636.524 1.625 2.184 2.55 3.863 2.15z"
+                style="fill:#fed241;stroke-width:.0546875" transform="matrix(.15043 0 0 .15128 -9.197 -11.669)" />
+              <path
+                d="M77.684 139.093a10.047 10.047 0 0 1-1.778-.44c-4.401-1.638-7.102-6.448-7.793-13.879-.248-2.672-.226-5.747.06-8.312.58-5.22 2.461-9.19 5.386-11.37 1.238-.924 2.507-1.492 4.128-1.85l.543-.12 13.467-.016 13.467-.017v-2.569H87.172l-.014-4.252a462.091 462.091 0 0 1 0-4.686c.035-1.212.75-2.646 1.828-3.67 2.457-2.332 6.73-3.63 13.034-3.961 1.25-.066 4.483-.062 5.66.006 6.908.4 11.57 2.134 13.905 5.172.716.93 1.239 2.133 1.41 3.239.037.237.05 3.536.038 9.656-.016 8.576-.025 9.342-.114 9.871-.534 3.182-2.114 5.353-4.849 6.666-.83.398-1.581.662-2.423.85-1.543.347-.815.325-11.577.341-6.641.01-10.01.034-10.418.075-2.358.236-4.291 1.07-5.758 2.482a8.563 8.563 0 0 0-1.843 2.52c-.584 1.18-.881 2.098-1.135 3.5-.115.637-.119.806-.137 5.729l-.018 5.072-3.457-.008c-1.9-.004-3.53-.018-3.62-.029zm18.238-43.201c1.546-.512 2.494-2.124 2.166-3.684-.315-1.5-1.522-2.536-3.042-2.612-.813-.041-1.433.154-2.112.665a3.246 3.246 0 0 0-1.202 3.205c.402 1.901 2.356 3.033 4.19 2.426z"
+                style="fill:#3572a4;stroke-width:.0546875" transform="matrix(.15043 0 0 .15128 -9.197 -11.669)" />
+            </svg>
+            <h3><span>Py</span>thon</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="point"></div>
+          <div class="git">
+            <svg class="tech-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 13.229 13.229">
+              <path
+                d="M6.39 12.363a.938.938 0 0 1-.197-.102c-.048-.035-1.251-1.23-2.674-2.657C.654 6.734.808 6.91.84 6.543a.752.752 0 0 1 .093-.31c.042-.07.866-.917 1.831-1.88L4.52 2.6l.653.653.654.654-.038.158a.863.863 0 0 0 .071.596c.08.156.27.35.379.385l.064.02V8.26l-.105.065a.88.88 0 0 0 .098 1.565c.142.065.195.073.395.061.256-.015.368-.061.552-.227a.87.87 0 0 0-.079-1.344l-.136-.096V5.138l.604.604c.425.425.6.618.585.65-.01.025-.026.129-.034.231-.018.25.051.451.22.64a.863.863 0 0 0 1.297 0 .858.858 0 0 0 0-1.169c-.208-.231-.557-.351-.815-.28l-.12.033-.642-.641c-.642-.642-.642-.642-.62-.748A.892.892 0 0 0 6.44 3.411c-.087.02-.122-.01-.756-.645l-.664-.665.544-.546c.299-.3.6-.58.672-.622a.754.754 0 0 1 .31-.093C6.91.807 6.732.65 9.62 3.532c1.434 1.432 2.642 2.66 2.684 2.73a.771.771 0 0 1 .057.617c-.05.155-.176.286-2.686 2.795-2.41 2.41-2.646 2.637-2.782 2.682a.78.78 0 0 1-.504.007z"
+                style="fill:#ef4f32;stroke-width:.0302175" />
+            </svg>
+            <h3>Git</h3>
+          </div>
+          <div class="point"></div>
+          <div class="point"></div>
+        </div>
       </section>
-      <section class="contact" id="contact" style="height: 800px;">
-
+      <section class="contact" id="contact">
+        <h2 class="title-section">Contacto</h2>
+        <div class="container-contact">
+          <h4>Enviar correo</h4>
+          <a href="mailto:douglasmontoyalbjf@gmail.com">douglasmontoyalbjf@gmail.com</a>
+          <br><br>
+          <h4>Redes</h4>
+          <div class="social-networks">
+            <a href="https://github.com/DouglasMontoya" target="_blank">
+              <svg class="so-net" xmlns="http://www.w3.org/2000/svg" height="2.1em" viewBox="0 0 496 512">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/douglas-montoya-126002230/" target="_blank">
+              <svg class="so-net" xmlns="http://www.w3.org/2000/svg" height="2.1em" viewBox="0 0 448 512">
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/douglasmonfs/" target="_blank">
+              <svg class="so-net" xmlns="http://www.w3.org/2000/svg" height="2.1em" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
   </div>
